@@ -1,4 +1,4 @@
-/**
+/*!
  * Copyright (c) 2014 Jon Schlinkert
  * Licensed under the MIT License (MIT).
  */
@@ -38,6 +38,7 @@ var _ = require('lodash');
  * @param {Array|String} `arguments`
  * @param {String} `separator`
  * @return {String}
+ * @api public
  */
 
 module.exports = function (/*args, separator*/) {
