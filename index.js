@@ -41,8 +41,17 @@ var _ = require('lodash');
  * @api public
  */
 
-module.exports = function (/*args, separator*/) {
+module.exports = function () {
   var args = [].slice.call(arguments);
+  var len = args.length;
+  var opts = {};
+
+  if (typeof args[len - 1] === 'object' &&
+    !Array.isArray(args[len - 1])) {
+    opts = args[len - 1];
+    args.pop();
+  }
+
   var initial = _.flatten(_.initial(args));
   var sep = _.last(args);
 
